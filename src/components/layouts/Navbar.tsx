@@ -1,15 +1,15 @@
 
 import Link from 'next/link';
-import React from 'react'
+
 
 const Navbar = () => {
   return (
     <header>
       <nav
-        className="w-full bg-gray-200 px-8 py-4 lg:flex hidden items-center justify-between text-black
+        className="w-full bg-white px-8 py-4 lg:flex hidden items-center justify-between text-black
       "
       >
-        <h1 className="text-3xl font-bold tracking-wide">SILENCE PLEASE</h1>
+        <Link href="/" className="text-3xl font-bold tracking-wide">SILENCE PLEASE</Link>
 
         <ul className="flex gap-6 text-sm font-medium cursor-pointer hover:underline">
           <Link href="/speakers">Speakers</Link>

@@ -9,7 +9,7 @@ const page = () => {
      
       <HeroSection/>
       <ProductDetails />
-      <Footer />
+      <Footer showTitle={true}/>
     </div>
   );
 }
