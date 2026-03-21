@@ -1,10 +1,12 @@
 import Image from "next/image"
+import MobileNavbar from "./layouts/MobileNavbar";
 
 
 const HeroSection = () => {
   return (
     <section>
       <section className="relative h-screen w-full overflow-hidden">
+        <MobileNavbar/>
         {/* Background Video */}
         <video
           autoPlay
@@ -21,7 +23,7 @@ const HeroSection = () => {
 
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full">
-          <h1 className="text-white text-[110px] font-semibold tracking-wide text-center">
+          <h1 className="text-white lg:text-[110px] text-4xl font-semibold tracking-wide text-center">
             SILENCE PLEASE
           </h1>
         </div>

@@ -6,6 +6,7 @@ import ProductDetails from "@/components/products/ProductDetails";
 const page = () => {
   return (
     <div>
+     
       <HeroSection/>
       <ProductDetails />
       <Footer />
