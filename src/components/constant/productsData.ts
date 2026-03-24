@@ -1,7 +1,7 @@
 export const productsData = [
   {
     title: "Hush in Silver",
-    image: "/images/hush-insilver-front.webp",
+    imageFront: "/images/hush-insilver-front.webp",
     price: "₦1,601,600.00",
     soldOut: true,
   },
