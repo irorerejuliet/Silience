@@ -16,7 +16,7 @@ const Navbar = () => {
           <Link href="/event">Events</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/login">Log in</Link>
+          <Link href="/sigin">Log in</Link>
           <Link href="/cart" >
             Cart (0)
           </Link>
