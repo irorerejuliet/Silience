@@ -1,6 +1,7 @@
 import { productsData } from "../constant/productsData";
 import ProductCard from "./ProductCard";
 
+
 const ProductDetails = () => {
 
   return (
