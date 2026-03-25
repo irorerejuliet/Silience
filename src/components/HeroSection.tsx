@@ -3,7 +3,7 @@ import MobileNavbar from "./layouts/MobileNavbar";
 const HeroSection = () => {
   return (
     <section>
-      <section className="relative h-screen w-full overflow-hidden">
+      <div className="relative h-screen w-full overflow-hidden">
         <MobileNavbar /> {/* Background Video */}
         <video
           autoPlay
@@ -21,7 +21,7 @@ const HeroSection = () => {
             SILENCE PLEASE
           </h1>
         </div>
-      </section>
+      </div>
       <div className="flex ">
         <Image
           src="/images/hero-img-1.webp"
