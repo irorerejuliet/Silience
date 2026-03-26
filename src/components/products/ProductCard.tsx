@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 type ProductProps = {
@@ -8,6 +9,7 @@ type ProductProps = {
   imageSide: string;
   price: string;
   soldOut?: boolean;
+  href: string;
 };
 
 const ProductCard = ({
@@ -15,6 +17,7 @@ const ProductCard = ({
   imageFront,
   imageSide,
   price,
+  href,
   soldOut,
 }: ProductProps) => {
   const [flipped, setFlipped] = useState(false);
@@ -25,13 +28,15 @@ const ProductCard = ({
         className="flex items-center justify-between cursor-pointer"
         onClick={() => setFlipped(!flipped)}
       >
-        <Image
-          src={flipped ? imageSide : imageFront}
-          alt={title}
-          width={635}
-          height={876}
-          className="object-contain"
-        />
+        <Link href={href}>
+          <Image
+            src={flipped ? imageSide : imageFront}
+            alt={title}
+            width={635}
+            height={876}
+            className="object-contain"
+          />
+        </Link>
       </div>
 
       <div className="p-4 text-sm font-medium text-black bg-white">

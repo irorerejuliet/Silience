@@ -1,0 +1,34 @@
+// import { productsData } from "@/components/constant/productsData";
+
+// export default async function Page({
+//   params,
+// }: {
+//   params: Promise<{ hushinsilver: string }>;
+// }) {
+//   const { hushinsilver } = await params;
+//  return productsData.filter((href) =>
+//    href === hushinsilver ? <h1>Remy</h1> : <h1>No product found</h1>;
+//  );
+
+// }
+
+import { productsData } from "@/components/constant/productsData";
+import ProductPreview from "@/components/ProductPreview";
+import { notFound } from "next/navigation";
+
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  const product = productsData.find((item) => item.href === slug);
+
+  if (!product) {
+    notFound(); // ✅ better than <h1>No product found</h1>
+  }
+
+  return (<ProductPreview title={product.title} imageFront={product.imageFront} imageSide={product.imageSide} price={product.price} href={product.href} isVideo={product.isVideo} videoUrl={product.videoUrl}/>)
+  ;
+}
