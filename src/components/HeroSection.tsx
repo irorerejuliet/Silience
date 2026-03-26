@@ -1,13 +1,10 @@
-import Image from "next/image"
+import Image from "next/image";
 import MobileNavbar from "./layouts/MobileNavbar";
-
-
 const HeroSection = () => {
   return (
     <section>
-      <section className="relative h-screen w-full overflow-hidden">
-        <MobileNavbar/>
-        {/* Background Video */}
+      <div className="relative h-screen w-full overflow-hidden">
+        <MobileNavbar /> {/* Background Video */}
         <video
           autoPlay
           loop
@@ -17,17 +14,14 @@ const HeroSection = () => {
         >
           <source src="/videos/hero-video.mp4" type="video/mp4" />
         </video>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
-
+        {/* Overlay */} <div className="absolute inset-0 bg-black/40"></div>
         {/* Hero Content */}
-        <div className="relative z-10 flex items-center justify-center h-full">
+        <div className="relative z-10 flex items-center justify-center mx-auto h-full ">
           <h1 className="text-white lg:text-[110px] text-4xl font-semibold tracking-wide text-center">
             SILENCE PLEASE
           </h1>
         </div>
-      </section>
+      </div>
       <div className="flex ">
         <Image
           src="/images/hero-img-1.webp"
@@ -46,6 +40,5 @@ const HeroSection = () => {
       </div>
     </section>
   );
-}
-
-export default HeroSection
+};
+export default HeroSection;

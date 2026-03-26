@@ -1,32 +1,46 @@
+"use client"
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 type ProductProps = {
   title: string;
-  image: string;
+  imageFront: string;
+  imageSide: string;
   price: string;
   soldOut?: boolean;
+  href: string;
 };
 
-const  ProductCard =  ({
+const ProductCard = ({
   title,
-  image,
+  imageFront,
+  imageSide,
   price,
+  href,
   soldOut,
 }: ProductProps) => {
+  const [flipped, setFlipped] = useState(false);
+
   return (
     <div className="flex flex-col">
-      {/* bg-gradient-to-b from-gray-800 to-gray-200 */}
-      <div className=" flex items-center justify-between">
-        <Image
-          src={image}
-          alt={title}
-          width={635}
-          height={876}
-          className="object-contain"
-        />
+      <div
+        className="flex items-center justify-between cursor-pointer"
+        onClick={() => setFlipped(!flipped)}
+      >
+        <Link href={href}>
+          <Image
+            src={flipped ? imageSide : imageFront}
+            alt={title}
+            width={635}
+            height={876}
+            className="object-contain"
+          />
+        </Link>
       </div>
+
       <div className="p-4 text-sm font-medium text-black bg-white">
-        <h3 className="">{title}</h3>
+        <h3>{title}</h3>
 
         {soldOut ? <p className="text-gray-700">Sold out</p> : null}
 
@@ -36,5 +50,6 @@ const  ProductCard =  ({
       </div>
     </div>
   );
-}
-export default ProductCard
+};
+
+export default ProductCard;
