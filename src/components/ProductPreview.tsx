@@ -3,6 +3,8 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import QuestionAndAnswer from "./QuestionAndAnswer";
+import { questionAndAnswerData } from "./constant/questionAndAnswerData";
 
 type ProductProps = {
   title: string;
@@ -38,7 +40,7 @@ console.log(isVideo)
         <Image src={imageFront} alt={title} width={920} height={1190} />
         <Image src={imageSide} alt={title} width={920} height={1190} />
       </div>
-      <div>
+      <div className="">
         <h1>{title}</h1>
         <p className="text-sm mb-2">Quantity:</p>
 
@@ -53,14 +55,21 @@ console.log(isVideo)
             +
           </button>
         </div>
-        <div className="">
-          <button className="border border-black text-black lg:w-147 w-full py-1 px-6 flex items-center justify-center text-sm">
-            Add to Cart <ArrowRight size={15}/>
-          </button>
-          <button className="flex items-center bg-black text-white lg:w-147 w-full py-1 px-6 my-2 justify-center">
-            Buy with
-            <Image src="/images/google-icon.png" alt="" width={50} height={5} />Pay</button>
-        </div>
+
+        <button className="border border-black text-black lg:w-147 w-full py-1 px-6 flex items-center justify-center text-sm">
+          Add to Cart <ArrowRight size={15} />
+        </button>
+        <button className="flex items-center bg-black text-white lg:w-147 w-full py-1 px-6 my-2 justify-center">
+          Buy with
+          <Image src="/images/google-icon.png" alt="" width={50} height={5} />
+          Pay
+        </button>
+
+        <QuestionAndAnswer
+          faqs={questionAndAnswerData}
+          title="Any Questions"
+          subTitle="We're here to help"
+        />
       </div>
     </div>
   );
@@ -68,27 +77,3 @@ console.log(isVideo)
 
 export default ProductPreview
 
-
-
-
-// const ProductPreview = () => {
-//   return (
-//     <div>
-//       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-//         {hushinSilverImages.map((image, index) => (
-//           <div key={index} className="relative w-full h-[300px]">
-//             <Image
-//               src={image}
-//               alt={`Product image ${index + 1}`}
-//               fill
-//               className="object-contain"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//       <h1></h1>
-//     </div>
-//   );
-// };
-
-// export default ProductPreview;
