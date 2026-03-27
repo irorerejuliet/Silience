@@ -92,9 +92,18 @@ export const productsData = [
     videoUrl: "/videos/hero-video.mp4",
   },
   {
-    title: "Hush in Glossy Black",
+    title: "Hum in White Oak",
     imageFront: "/images/hum-in-whit-oak.webp",
     imageSide: "/images/humin-whiteoak-side.jpg",
+    price: "₦6,103,200.00 / Pair",
+    href: "hum-in-brush-aluminum",
+    isVideo: false,
+    videoUrl: "/videos/hero-video.mp4",
+  },
+  {
+    title: "Hush in Walnut",
+    imageFront: "/images/hum-in-walnut.webp",
+    imageSide: "images/hubin-walnut-side.jpg",
     price: "₦6,135,900.00 / Pair",
     href: "hush-in-white-oak",
     isVideo: false,
@@ -102,13 +111,15 @@ export const productsData = [
   },
   {
     title: "Hum in Green Edge Plexiglass",
-    imageFront: "/images/hum-in-walnut.webp",
-    imageSide: "/images/hubin-walnut-side.jpg",
+    imageFront: "/images/hum-in-green-edge.webp",
+    imageSide: "/images/humin-greenedge-side.jpg",
     price: "₦7,304,600.00",
     href: "hum-in-green-edge-plexiglass",
     isVideo: false,
     videoUrl: "/videos/hero-video.mp4",
   },
+ 
+ 
   {
     title: "Whisper",
     imageFront: "/images/whisper.webp",
