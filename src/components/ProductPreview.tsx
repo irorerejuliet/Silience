@@ -35,12 +35,12 @@ const ProductPreview = ({
   };
 console.log(isVideo)
   return (
-    <div className="flex bg-white text-black gap-5">
-      <div className="">
+    <div className="flex bg-white text-black gap-2">
+      <div className="flex-1">
         <Image src={imageFront} alt={title} width={920} height={1190} />
         <Image src={imageSide} alt={title} width={920} height={1190} />
       </div>
-      <div className="">
+      <div className="w-[952px]">
         <h1>{title}</h1>
         <p className="text-sm mb-2">Quantity:</p>
 
@@ -67,8 +67,8 @@ console.log(isVideo)
 
         <QuestionAndAnswer
           faqs={questionAndAnswerData}
-          title="Any Questions"
-          subTitle="We're here to help"
+          question="Any Questions"
+          answer="We're here to help"
         />
       </div>
     </div>

@@ -1,60 +1,57 @@
 "use client";
 import { useState } from "react";
-import { questionAndAnswerData } from "./constant/questionAndAnswerData";
+import {  ChevronUp, ChevronDown, Minus, Plus } from "lucide-react";
 
-export type faq = {
+export type FAQ = {
   id: number;
   question: string;
   answer: string;
 };
 
 type FAQsProps = {
-  faqs: faq[];
-  title: string;
-  subTitle: string;
+  faqs: FAQ[];
 };
 
-const QuestionAndAnswer = ({faqs, title, subTitle }: FAQsProps) => {
+const QuestionAndAnswer = ({ faqs }: FAQsProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className=" px-4 sm:px-6 py-20 sm:py-28 lg:py-[140px] bg-white text-black">
-     
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">
-         
+    <section className="py-20 sm:py-28 lg:py-[140px] bg-white text-black">
+      {faqs.map((faq, index) => (
+        <div
+          key={faq.id}
+          className="border-b border-black/10 py-3 w-full  text-black"
+        >
+          <button
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            className="w-full flex items-start justify-between"
+          >
+            <span className="text-base font-medium  leading-7">
+              {faq.question}
+            </span>
 
-          {/* RIGHT */}
-          <div>
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-b border-black/10 py-5 sm:py-6 "
-              >
-                <button
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
-                  className="w-full flex items-start justify-between gap-4 text-left"
-                >
-                  <span className="text-[16px] sm:text-[18px] font-medium  text-xl font-gtamerica leading-7">
-                    {faq.question}
-                  </span>
+            <span className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center">
+              {index === 0 ? (
+                openIndex === index ? (
+                  <ChevronUp size={21} />
+                ) : (
+                  <ChevronDown size={21} />
+                )
+              ) : openIndex === index ? (
+                <Minus size={18} />
+              ) : (
+                <Plus size={18} />
+              )}
+            </span>
+          </button>
 
-                  <span className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-full  text-lg sm:text-xl">
-                    {openIndex === index ? "–" : "+"}
-                  </span>
-                </button>
-
-                {openIndex === index && (
-                  <p className="mt-4 text-[15px] sm:text-[16px] leading-[1.6] text-black/70 max-w-[640px] ">
-                    {faq.answer}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
+          {openIndex === index && (
+            <p className=" text-xs font-semibold leading-[1.6] text-black/70">
+              {faq.answer}
+            </p>
+          )}
         </div>
-     
+      ))}
     </section>
   );
 };
