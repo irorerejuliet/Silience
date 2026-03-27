@@ -16,7 +16,7 @@ const QuestionAndAnswer = ({ faqs }: FAQsProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 sm:py-28 lg:py-[140px] bg-white text-black">
+    <section className="py-20 sm:py-28 lg:py-35 bg-white text-black">
       {faqs.map((faq, index) => (
         <div
           key={faq.id}
