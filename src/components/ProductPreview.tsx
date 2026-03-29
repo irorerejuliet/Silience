@@ -1,10 +1,11 @@
 "use client"
 
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import QuestionAndAnswer from "./QuestionAndAnswer";
 import { questionAndAnswerData } from "./constant/questionAndAnswerData";
+import HushinsilverProductDetails from "./products/HushinsilverProductDetails";
+import { ArrowRight } from "lucide-react";
 
 type ProductProps = {
   title: string;
@@ -15,6 +16,7 @@ type ProductProps = {
   href: string;
   isVideo?: boolean;
   videoUrl: string;
+  
 };
 
 const ProductPreview = ({
@@ -40,7 +42,7 @@ console.log(isVideo)
         <Image src={imageFront} alt={title} width={920} height={1190} />
         <Image src={imageSide} alt={title} width={920} height={1190} />
       </div>
-      <div className="w-[952px]">
+      <div className="w-238">
         <h1>{title}</h1>
         <p className="text-sm mb-2">Quantity:</p>
 
@@ -64,12 +66,8 @@ console.log(isVideo)
           <Image src="/images/google-icon.png" alt="" width={50} height={5} />
           Pay
         </button>
-
-        <QuestionAndAnswer
-          faqs={questionAndAnswerData}
-          question="Any Questions"
-          answer="We're here to help"
-        />
+        <HushinsilverProductDetails />
+        <QuestionAndAnswer faqs={questionAndAnswerData} />
       </div>
     </div>
   );

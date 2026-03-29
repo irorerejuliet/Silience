@@ -1,7 +1,7 @@
-import { faq } from "../QuestionAndAnswer";
+import { FAQ } from "../QuestionAndAnswer";
 
 
-export const questionAndAnswerData: faq[] = [
+export const questionAndAnswerData: FAQ[] = [
   {
     id: 1,
     question: " Sound",
