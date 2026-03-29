@@ -3,7 +3,7 @@ const HushinsilverProductDetails = () => {
   return (
     <div>
       <div className=" bg-white text-[13px] font-semibold ">
-        <div className=" px-6 py-10">
+        <div className="  py-10">
           {/* Stock */}
           <p className="text-sm font-semibold">
             Currently in stock. Ships Today
@@ -54,7 +54,7 @@ const HushinsilverProductDetails = () => {
           {/* Dimensions */}
           <h2 className="mt-10  font-semibold">Dimensions</h2>
 
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-4 space-y-2 list-disc">
             <li>Product Size: L18 x W18 x H38 cm</li>
             <li>Shipping Unit: Pair</li>
             <li>Product Unit Weight: 3.8 kg</li>
