@@ -17,6 +17,7 @@ const QuestionAndAnswer = ({ faqs }: FAQsProps) => {
 
   return (
     <section className=" bg-white text-black">
+      <p>Frequently asked question</p>
       {faqs.map((faq, index) => (
         <div
           key={faq.id}
