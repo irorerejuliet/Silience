@@ -16,7 +16,7 @@ const QuestionAndAnswer = ({ faqs }: FAQsProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 sm:py-28 lg:py-35 bg-white text-black">
+    <section className=" bg-white text-black">
       {faqs.map((faq, index) => (
         <div
           key={faq.id}
@@ -26,7 +26,7 @@ const QuestionAndAnswer = ({ faqs }: FAQsProps) => {
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="w-full flex items-start justify-between"
           >
-            <span className="text-base font-medium  leading-7">
+            <span className="text-[13px] font-semibold leading-7">
               {faq.question}
             </span>
 
@@ -46,7 +46,7 @@ const QuestionAndAnswer = ({ faqs }: FAQsProps) => {
           </button>
 
           {openIndex === index && (
-            <p className=" text-xs font-semibold leading-[1.6] text-black/70">
+            <p className=" text-[13px] font-semibold leading-[1.6] text-black/70">
               {faq.answer}
             </p>
           )}
