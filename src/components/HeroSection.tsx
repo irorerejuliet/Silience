@@ -3,12 +3,7 @@ import MobileNavbar from "./layouts/MobileNavbar";
 
 const HeroSection = () => {
   return (
-
-    
-
-    
     <section className="relative w-full">
-
       <div className="absolute inset-0 pointer-events-none z-20">
         <div className="sticky top-0 h-screen flex items-center justify-center">
           <h1 className="text-white lg:text-[110px] md:text-7xl text-4xl font-semibold text-center leading-none">
@@ -17,12 +12,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-
-     
-        
-
       <div className="relative">
-
         <div className="relative h-screen w-full overflow-hidden">
           <MobileNavbar />
           <video
@@ -35,7 +25,6 @@ const HeroSection = () => {
             <source src="/videos/hero-video.mp4" type="video/mp4" />
           </video>
         </div>
-
 
         <div className="flex h-screen w-full">
           <Image
@@ -54,7 +43,6 @@ const HeroSection = () => {
           />
         </div>
       </div>
-     
     </section>
   );
 };
