@@ -25,7 +25,7 @@ const HeroSection = () => {
             <source src="/videos/hero-video.mp4" type="video/mp4" />
           </video>
         </div>
-
+gi
        
         <div className="flex h-screen w-full">
           <Image
