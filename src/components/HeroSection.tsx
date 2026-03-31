@@ -36,7 +36,6 @@ const HeroSection = () => {
           </video>
         </div>
 
-        
 
         <div className="flex h-screen w-full">
           <Image
