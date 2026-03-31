@@ -1,4 +1,4 @@
-export const productsData = [
+export const productdetailsData = [
   {
     title: "Hush in Silver",
     imageFront: "/images/hush-insilver-front.webp",
@@ -76,14 +76,14 @@ export const productsData = [
     imageFront: "/images/hum-in-whit-oak.webp",
     imageSide: "/images/humin-whiteoak-side.jpg",
     price: "₦6,103,200.00 / Pair",
-    href: "hush-in-white-oak",
+    href: "hum-in-brush-aluminum",
   },
   {
     title: "Hush in Walnut",
     imageFront: "/images/hum-in-walnut.webp",
     imageSide: "images/hubin-walnut-side.jpg",
     price: "₦6,135,900.00 / Pair",
-    href: "hush-in-walnut",
+    href: "hush-in-white-oak",
   },
   {
     title: "Hum in Green Edge Plexiglass",
