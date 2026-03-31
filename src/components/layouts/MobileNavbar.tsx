@@ -1,5 +1,5 @@
-"use client"; // if using Next.js 13 app directory
-import { ArrowLeft, ArrowRight, SearchIcon, X } from "lucide-react";
+"use client"; 
+import { ArrowRight, SearchIcon, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -68,7 +68,7 @@ const MobileNavbar = () => {
           <p>Your cart</p>
           <p>Your cart is currently empty</p>
           <p className="flex items-center gap-4 underline">Continue Shopping <ArrowRight/></p>
-          {/* Map your cart items here */}
+          
         </div>
       </div>
 
