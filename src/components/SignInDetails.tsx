@@ -13,7 +13,7 @@ const SignInDetails = () => {
           <p className="text-sm text-gray-500">Sign in or create an account</p>
         </div>
 
-        <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-lg font-medium hover:opacity-90 transition">
+        <button className="w-full bg-linear-to-r from-purple-600 to-indigo-600 text-white py-3 rounded-lg font-medium hover:opacity-90 transition">
           Continue with shop
         </button>
 

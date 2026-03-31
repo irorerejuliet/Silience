@@ -3,9 +3,12 @@ import MobileNavbar from "./layouts/MobileNavbar";
 
 const HeroSection = () => {
   return (
-    /* 1. The parent must contain the sticky element's "track" */
+
+    
+
+    
     <section className="relative w-full">
-      {/* 2. The Sticky Wrapper: Set to absolute to overlay, but h-full to define the limit */}
+
       <div className="absolute inset-0 pointer-events-none z-20">
         <div className="sticky top-0 h-screen flex items-center justify-center">
           <h1 className="text-white lg:text-[110px] md:text-7xl text-4xl font-semibold text-center leading-none">
@@ -14,9 +17,12 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* 3. Content Layers (Determines the height of the section) */}
+
+     
+        
+
       <div className="relative">
-        {/* Video Section (100vh) */}
+
         <div className="relative h-screen w-full overflow-hidden">
           <MobileNavbar />
           <video
@@ -30,7 +36,8 @@ const HeroSection = () => {
           </video>
         </div>
 
-        {/* Images Section (Another 100vh) */}
+        
+
         <div className="flex h-screen w-full">
           <Image
             src="/images/hero-img-1.webp"
@@ -48,6 +55,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
+     
     </section>
   );
 };

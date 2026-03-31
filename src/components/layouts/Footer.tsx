@@ -1,4 +1,4 @@
-// components/Footer.jsx
+
 "use client";
 
 import { Instagram } from "lucide-react";
