@@ -5,12 +5,17 @@ import ProductDetails from "@/components/products/ProductDetails";
 
 const page = () => {
   return (
-    <div>
-     
-      <HeroSection/>
+    <main>
+      {/* <img
+        height="160"
+        width="160"
+        src="http://www.google.com/s2/favicons?domain=https://silenceplease.com/products/hush-in-matte-black?variant=43305895100458"
+        className="bg-white"
+      /> */}
+      <HeroSection />
       <ProductDetails />
-      <Footer showTitle={true}/>
-    </div>
+      <Footer showTitle={true} />
+    </main>
   );
 }
 
