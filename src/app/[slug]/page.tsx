@@ -14,7 +14,7 @@ export default async function Page({
   const product = productsData.find((item) => item.href === slug);
 
   if (!product) {
-    notFound(); // ✅ better than <h1>No product found</h1>
+    notFound(); 
   }
 
   return (<ProductPreview title={product.title} imageFront={product.imageFront} imageSide={product.imageSide} price={product.price} href={product.href}  />)

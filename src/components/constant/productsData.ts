@@ -81,7 +81,7 @@ export const productsData = [
   {
     title: "Hush in Walnut",
     imageFront: "/images/hum-in-walnut.webp",
-    imageSide: "images/hubin-walnut-side.jpg",
+    imageSide: "/images/hubin-walnut-side.jpg",
     price: "₦6,135,900.00 / Pair",
     href: "hushinWalnut",
   },
