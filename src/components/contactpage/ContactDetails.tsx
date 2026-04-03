@@ -1,8 +1,10 @@
+import MobileNavbar from "../layouts/MobileNavbar";
 
 
 const ContactDetails = () => {
   return (
-    <section className=" bg-white px-4 pt-8 pb-52">
+    <section className=" bg-white px-4 pt-10 pb-52">
+      <MobileNavbar/>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
         <h2 className="text-sm font-semibold text-gray-800">Contact</h2>
 

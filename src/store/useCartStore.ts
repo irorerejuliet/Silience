@@ -11,17 +11,17 @@ interface CartItem {
 
 interface CartState {
   cart: CartItem[];
-  isDrawerOpen: boolean; // New: tracks if the side menu is visible
+  isDrawerOpen: boolean;
   addToCart: (item: CartItem) => void;
   removeFromCart: (id: string) => void;
-  toggleDrawer: (open: boolean) => void; // New: function to open/close
+  toggleDrawer: (open: boolean) => void; 
 }
 
 export const useCartStore = create<CartState>()(
   persist(
     (set) => ({
       cart: [],
-      isDrawerOpen: false, // Default to closed
+      isDrawerOpen: false, 
 
       toggleDrawer: (open) => set({ isDrawerOpen: open }),
 
@@ -40,7 +40,7 @@ export const useCartStore = create<CartState>()(
 
           return {
             cart: updatedCart,
-            isDrawerOpen: true, // Automatically open the drawer when an item is added
+            isDrawerOpen: true, 
           };
         }),
 
