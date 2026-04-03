@@ -1,6 +1,11 @@
+"use client";
 import Link from "next/link";
+import { useCartStore } from "@/store/useCartStore"; // Import your store
 
 const Navbar = () => {
+  // Pull the cart and toggle function from your store
+  const { cart, toggleDrawer } = useCartStore();
+
   return (
     <header>
       <nav className="fixed top-0 left-0 w-full bg-white px-8 py-4 lg:flex hidden items-center justify-between text-black z-50">
@@ -8,7 +13,7 @@ const Navbar = () => {
           SILENCE PLEASE
         </Link>
 
-        <ul className="flex gap-6 text-sm font-medium">
+        <ul className="flex gap-4 text-sm font-medium items-center">
           <li>
             <Link href="/speakers" className="hover:underline">
               Speakers
@@ -34,10 +39,15 @@ const Navbar = () => {
               Log in
             </Link>
           </li>
+
+          {/* Replaced Link with Button to trigger the Slide Show */}
           <li>
-            <Link href="/cart" className="hover:underline">
-              Cart (0)
-            </Link>
+            <button
+              onClick={() => toggleDrawer(true)}
+              className="hover:underline font-medium"
+            >
+              Cart ({cart.length})
+            </button>
           </li>
         </ul>
       </nav>

@@ -23,7 +23,7 @@ const AboutDetails = () => {
   };
 
   return (
-    <div className="bg-white text-black">
+    <div className="bg-white text-black pt-20">
       {/* Paragraphs */}
       <div className="mx-auto max-w-3xl space-y-4 p-4">
         {paragraphs.map((text, index) => (
@@ -39,7 +39,7 @@ const AboutDetails = () => {
 
       {/* Image Slider */}
       <div className="p-4 overflow-hidden">
-        {/* Sliding Track */}
+        
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
@@ -52,8 +52,8 @@ const AboutDetails = () => {
                 <Image
                   src={img.src}
                   alt={img.alt}
-                  width={800} // smaller intrinsic width
-                  height={500} // maintain aspect ratio
+                  width={800} 
+                  height={500} 
                   className="rounded-lg object-cover w-full h-auto"
                 />
               </div>
