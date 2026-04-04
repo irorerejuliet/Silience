@@ -1,51 +1,72 @@
-import Image from "next/image"
+"use client"
+import Image from "next/image";
 import MobileNavbar from "./layouts/MobileNavbar";
-
+import { useState } from "react";
 
 const HeroSection = () => {
+  const [isVideoLoad, setIsVideoLoad] = useState(false)
   return (
-    <section>
-      <section className="relative h-screen w-full overflow-hidden">
-        <MobileNavbar/>
-        {/* Background Video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        >
-          <source src="/videos/hero-video.mp4" type="video/mp4" />
-        </video>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <h1 className="text-white lg:text-[110px] text-4xl font-semibold tracking-wide text-center">
+    <section className="relative w-full">
+      <div className="absolute inset-0 pointer-events-none z-20">
+        <div className="sticky top-0 h-screen flex items-center justify-center">
+          <h1 className="text-white lg:text-[110px] md:text-7xl text-4xl font-semibold text-center leading-none">
             SILENCE PLEASE
           </h1>
         </div>
-      </section>
-      <div className="flex ">
-        <Image
-          src="/images/hero-img-1.webp"
-          alt="her-img"
-          width={952}
-          height={953}
-          className="w-1/2 object-cover"
-        />
-        <Image
-          src="/images/hero-img-2.webp"
-          alt="her-img"
-          width={952}
-          height={953}
-          className="w-1/2 object-cover"
-        />
+      </div>
+
+      <div className="relative">
+        <div className="relative h-screen w-full overflow-hidden">
+          <MobileNavbar />
+          {!isVideoLoad && (
+            <div className="flex h-screen w-full">
+              <Image
+                src="/images/hero-img-1.webp"
+                alt="hero-img-1"
+                width={952}
+                height={953}
+                className="w-1/2 h-full object-cover"
+              />
+              <Image
+                src="/images/hero-img-2.webp"
+                alt="hero-img-2"
+                width={952}
+                height={953}
+                className="w-1/2 h-full object-cover"
+              />
+            </div>
+          )}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            onLoadedData={() => setIsVideoLoad(true)}
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          >
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div className="flex h-screen w-full">
+          <Image
+            src="/images/hero-img-1.webp"
+            alt="hero-img-1"
+            width={952}
+            height={953}
+            className="w-1/2 h-full object-cover"
+          />
+          <Image
+            src="/images/hero-img-2.webp"
+            alt="hero-img-2"
+            width={952}
+            height={953}
+            className="w-1/2 h-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );
-}
+};
 
-export default HeroSection
+export default HeroSection;
